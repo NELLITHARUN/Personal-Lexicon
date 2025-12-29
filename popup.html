@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Dictionary</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1>📚 My Dictionary</h1>
+        <div class="header-actions">
+          <button id="statsBtn" class="icon-btn" title="Statistics">
+            <span>📊</span>
+          </button>
+          <button id="settingsBtn" class="icon-btn" title="Settings">
+            <span>⚙️</span>
+          </button>
+          <button id="exportBtn" class="icon-btn" title="Export JSON">
+            <span>💾</span>
+          </button>
+          <button id="exportTextBtn" class="icon-btn" title="Export as Text">
+            <span>📄</span>
+          </button>
+          <button id="studyBtn" class="icon-btn" title="Study Mode">
+            <span>🎓</span>
+          </button>
+        </div>
+      </div>
+      <div class="stats-bar">
+        <span id="wordCount">0 words</span>
+        <span id="reviewedCount">0 reviewed</span>
+      </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search words..." autocomplete="off">
+      <select id="filterSelect">
+        <option value="all">All Words</option>
+        <option value="unreviewed">Unreviewed</option>
+        <option value="reviewed">Reviewed</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
+    <!-- Word List -->
+    <div class="words-container" id="wordsContainer">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">📖</div>
+        <h2>Your dictionary is empty</h2>
+        <p>Right-click on any word while browsing and select "Add to Dictionary" to start building your vocabulary!</p>
+      </div>
+    </div>
+
+    <!-- Word Detail Modal -->
+    <div class="modal" id="wordModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- Statistics Modal -->
+    <div class="modal" id="statsModal">
+      <div class="modal-content">
+        <span class="close" id="closeStatsModal">&times;</span>
+        <h2>Statistics</h2>
+        <div id="statsContent"></div>
+      </div>
+    </div>
+
+    <!-- Study Mode Modal -->
+    <div class="modal" id="studyModal">
+      <div class="modal-content study-modal">
+        <span class="close" id="closeStudyModal">&times;</span>
+        <h2>📚 Study Mode</h2>
+        <div id="studyContent" class="study-content">
+          <div id="studyWord" class="study-word"></div>
+          <div id="studyMeaning" class="study-meaning"></div>
+          <div id="studyExample" class="study-example"></div>
+        </div>
+        <div class="study-actions">
+          <button id="revealAnswer" class="btn btn-primary">Reveal Answer</button>
+          <button id="markReviewed" class="btn btn-success">Mark as Reviewed</button>
+          <button id="nextCard" class="btn btn-secondary">Next Card</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/popup.js"></script>
+</body>
+</html>
+

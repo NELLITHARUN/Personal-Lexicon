@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary Settings</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>⚙️ Dictionary Settings</h1>
+    </header>
+
+    <div class="content">
+      <!-- Edit Word Section (if editing) -->
+      <section id="editWordSection" class="section" style="display: none;">
+        <h2>Edit Word</h2>
+        <form id="editWordForm">
+          <div class="form-group">
+            <label>Word</label>
+            <input type="text" id="editWord" readonly>
+          </div>
+          <div class="form-group">
+            <label>Meaning</label>
+            <textarea id="editMeaning" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Phonetic</label>
+            <input type="text" id="editPhonetic">
+          </div>
+          <div class="form-group">
+            <label>Part of Speech</label>
+            <input type="text" id="editPartOfSpeech">
+          </div>
+          <div class="form-group">
+            <label>Example</label>
+            <textarea id="editExample" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Difficulty</label>
+            <select id="editDifficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <input type="text" id="editCategory" list="categories">
+            <datalist id="categories">
+              <option value="general">
+              <option value="academic">
+              <option value="business">
+              <option value="technical">
+              <option value="literature">
+              <option value="science">
+            </datalist>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="button" class="btn btn-secondary" id="cancelEdit">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- General Settings -->
+      <section class="section">
+        <h2>General Settings</h2>
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="autoFetchMeaning">
+            Automatically fetch word meanings
+          </label>
+          <p class="setting-desc">When enabled, meanings are automatically fetched from dictionary API</p>
+        </div>
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="showNotifications">
+            Show notifications
+          </label>
+          <p class="setting-desc">Display notifications when words are added or updated</p>
+        </div>
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="dailyReminder">
+            Daily word reminder
+          </label>
+          <p class="setting-desc">Get a daily notification with a random word from your dictionary</p>
+        </div>
+        <div class="setting-item" id="reminderTimeContainer" style="display: none;">
+          <label>
+            Reminder Time
+            <input type="time" id="reminderTime" value="09:00">
+          </label>
+          <p class="setting-desc">Set the time for daily word reminders</p>
+        </div>
+      </section>
+
+      <!-- Data Management -->
+      <section class="section">
+        <h2>Data Management</h2>
+        <div class="action-buttons">
+          <button id="exportBtn" class="btn btn-primary">Export Dictionary</button>
+          <button id="importBtn" class="btn btn-secondary">Import Dictionary</button>
+          <input type="file" id="importFile" accept=".json" style="display: none;">
+          <button id="clearBtn" class="btn btn-danger">Clear All Words</button>
+        </div>
+        <p class="warning">⚠️ Clearing all words cannot be undone!</p>
+      </section>
+
+      <!-- About -->
+      <section class="section">
+        <h2>About</h2>
+        <p>Personal Dictionary Extension v1.0.0</p>
+        <p>Build your vocabulary by collecting words with automatic meanings and definitions.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="scripts/options.js"></script>
+</body>
+</html>
+
