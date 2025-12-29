@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Dictionary - Chrome Extension
 
 A powerful Chrome extension to build your personal vocabulary by collecting words with automatic meanings, definitions, and examples. Perfect for language learners, students, and anyone looking to expand their vocabulary.
@@ -211,3 +212,6 @@ For issues, questions, or suggestions, please open an issue in the repository.
 
 Build your vocabulary one word at a time.
 
+=======
+# Personal-Lexicon
+>>>>>>> 3cd94881f05c8864ff32b1ad31e79063681e6b95
