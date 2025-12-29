@@ -2,6 +2,11 @@
 
 A powerful Chrome extension to build your personal vocabulary by collecting words with automatic meanings, definitions, and examples. Perfect for language learners, students, and anyone looking to expand their vocabulary.
 
+
+<img width="450" height="547" alt="Screenshot from 2025-12-29 21-54-23" src="https://github.com/user-attachments/assets/d2daeb0e-4cb5-4f6c-940a-674e23dceaf7" />
+
+
+
 ## 🌟 Features
 
 ### Core Features
